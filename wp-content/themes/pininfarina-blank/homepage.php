@@ -9,11 +9,10 @@
 
   <?php
     $args = array(
-    	'post_type'              => array( 'slideshow' ),
-    	'nopaging'               => true,
+      'post_type'              => array( 'slideshow' ),
+      'nopaging'               => true,
       'posts_per_page'         => '-1'
     );
-
     $slides = get_posts( $args );
     $total_slides = count($slides);
   ?>
@@ -96,7 +95,7 @@
           </div>
 
           <div class="button">
-            <div class="buttonBlack">Prenota</div>
+            <div class="buttonBlack"><a href="<?php echo site_url(); ?>/categoria-prodotto/laboratori/">prenota</a></div>
             <div class="triangle"></div>
           </div>
 

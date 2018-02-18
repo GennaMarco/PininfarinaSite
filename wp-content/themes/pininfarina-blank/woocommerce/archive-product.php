@@ -54,7 +54,7 @@ get_header( 'shop' ); ?>
     </header>
 
 		<?php if ( have_posts() ) : ?>
-
+			
 			<?php
 				/**
 				 * woocommerce_before_shop_loop hook.
@@ -67,11 +67,11 @@ get_header( 'shop' ); ?>
 			?>
 
 			<?php woocommerce_product_loop_start(); ?>
-
-				<?php woocommerce_product_subcategories(); ?>
-
+					
+				<?php new_name_product_subcategories(); ?>
+	
 				<?php while ( have_posts() ) : the_post(); ?>
-
+					
 					<?php
 						/**
 						 * woocommerce_shop_loop hook.
@@ -126,5 +126,69 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
+
+
+	<!-- Qua ci va il tutorial -->
+
+	<div class="s_aboutUs_secondTitle s_aboutUs_h1Style">Tutorial</div>
+
+	<div class="container-tutorial">
+		<div class="tutorial-image-container col-6">
+			 <img class="col-12 " src="http://www.fettadipolenta.it/wp-content/uploads/2018/01/ragazzo.jpg" alt="aa">
+		</div>
+		<div class="tutorial-box col-6">
+	    <div class="tutorial-title">Principiante</div>
+			<p>Cat cat moo moo lick ears lick paws. Small kitty warm kitty little balls of fur. Milk the cow licks paws for chew iPad power cord steal the warm chair right after you get up.  Cat cat moo moo lick ears lick paws. Small kitty warm kitty little balls of fur. Milk the cow licks paws for chew iPad power cord steal the warm chair right after you get up.</p>
+			<div class="tutorial-subtitle">Macchinari utilizzabili</div>
+			<ul class="list-machines">
+				<li>Lorem ipsum</li>
+				<li>Lorem ipsum</li>
+				<li>Lorem ipsum</li>
+				<li>Lorem ipsum</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container-tutorial">
+		<div class="tutorial-image-container col-6">
+			 <img class="col-12 " src="http://www.fettadipolenta.it/wp-content/uploads/2018/01/ragazzo.jpg" alt="aa">
+		</div>
+		<div class="tutorial-box col-6">
+			<div class="tutorial-title">Intermedio</div>
+			<p>Cat cat moo moo lick ears lick paws. Small kitty warm kitty little balls of fur. Milk the cow licks paws for chew iPad power cord steal the warm chair right after you get up.  Cat cat moo moo lick ears lick paws. Small kitty warm kitty little balls of fur. Milk the cow licks paws for chew iPad power cord steal the warm chair right after you get up.</p>
+			<div class="tutorial-subtitle">Macchinari utilizzabili</div>
+			<ul class="list-machines">
+				<li>Lorem ipsum</li>
+				<li>Lorem ipsum</li>
+				<li>Lorem ipsum</li>
+				<li>Lorem ipsum</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container-tutorial">
+		<div class="tutorial-image-container col-6">
+			 <img class="col-12 " src="http://www.fettadipolenta.it/wp-content/uploads/2018/01/ragazzo.jpg" alt="aa">
+		</div>
+		<div class="tutorial-box col-6">
+			<div class="tutorial-title">Esperto</div>
+			<p>Cat cat moo moo lick ears lick paws. Small kitty warm kitty little balls of fur. Milk the cow licks paws for chew iPad power cord steal the warm chair right after you get up.  Cat cat moo moo lick ears lick paws. Small kitty warm kitty little balls of fur. Milk the cow licks paws for chew iPad power cord steal the warm chair right after you get up.</p>
+			<div class="tutorial-subtitle">Macchinari utilizzabili</div>
+			<ul class="list-machines">
+				<li>Lorem ipsum</li>
+				<li>Lorem ipsum</li>
+				<li>Lorem ipsum</li>
+				<li>Lorem ipsum</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
 
 <?php get_footer( 'shop' ); ?>

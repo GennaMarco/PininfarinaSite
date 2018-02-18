@@ -3,6 +3,17 @@
   background-color: red;
 }
 
+.subcategory-container
+{
+	background-color: rgb(255, 164, 0);
+}
+
+.subcategory-link
+{
+	color: white;
+	float: right;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -585,4 +596,232 @@ a {
 .page-title {
   font-size: 42px;
   font-weight: 200px;
+}
+
+
+/*************************************
+**************WOOCOMMERCE*************
+*************************************/
+
+.woocommerce-products-header__title {
+  color: orange;
+}
+
+.woocommerce-products-header {
+  padding: 2%;
+  text-align: center;
+  color: #ffa300;
+  border-bottom: 4px solid #ffa300;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+
+.woocommerce-breadcrumb {
+  display: none;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product-category {
+
+}
+
+.woocommerce-loop-category__title {
+  /*text-align: center;*/
+  font-size: 18px;
+
+}
+
+.woocommerce-loop-category__title:before {
+  content: "";
+    display: block;
+    background: url("imgs/attrezzi.png") no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
+}
+
+.count {
+  display: none;
+}
+
+.s_aboutUs_secondTitle {
+  padding: 2%;
+    text-align: center;
+    color: #ffa300;
+    border-bottom: 4px solid #ffa300;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+/* page progetto css*/
+.container-project {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.project-box-title {
+  width: 50%;
+  background-color: #55bb16;
+  font-size: 37px;
+  font-weight: bold;
+  height: 60px;
+  padding: 2%;
+  float: left;
+  color: #fff;
+}
+
+.project-box-text {
+  float: left;
+  padding-right: 3%;
+  width: 50%;
+}
+
+.project-image {
+  float: right;
+  width: 50%;
+  /*margin-top: 7%;*/
+}
+
+.project-image img{
+  width: 100%;
+}
+
+.workshop-activities-title {
+  font-size: 30px;
+  margin-top: 5%;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
+.container-workshop {
+  content: "";
+  display: table;
+  clear: both;
+  margin: 1% 0 1% 0;
+  color: #fff;
+}
+
+.green1 {
+  background-color: #4ca813;
+}
+
+.green2 {
+  background-color: #449511;
+}
+
+.green3 {
+  background-color: #3b820f;
+}
+
+.workshop-box {
+  float: left;
+  padding: 2%;
+  height: 154px;
+}
+
+.workshop-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.workshop-image {
+  float: left;
+  height: 154px;
+}
+
+.d_progetto_mainTitle {
+/* background-color: #ff4f41; */
+  padding: 2%;
+  text-align: center;
+  /* vertical-align: middle; */
+  /* line-height: 50px; */
+  color: #55bb16;
+  border-bottom: 4px solid #55bb16;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.container-tutorial {
+  content: "";
+  display: table;
+  clear: both;
+  margin: 1% 0 1% 0;
+  color: #000;
+  height: auto;
+  background-color: #ffa300;
+}
+
+.tutorial-box {
+  float: left;
+  padding: 2%;
+}
+
+.tutorial-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.tutorial-subtitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.tutorial-image {
+  float: left;
+}
+
+.list-machines {
+  list-style: none;
+}
+
+.tutorial-image-container {
+  float: left;
+
+}
+
+/* RESPONSIVE PROGETTO */
+
+@media only screen and (max-width: 500px) {
+
+  .project-image {
+    width: 100%;
+  }
+  .project-box-text {
+    width: 100%;
+  }
+  .workshop-activities-title {
+    line-height: 38px;
+  }
+  .workshop-box {
+    width: 100% !important;
+  }
+  .workshop-image {
+    width: 100% !important;
+  }
+  .d_progetto_mainTitle {
+    padding: 4%;
+  }
+  .workshop-box {
+    height: auto;
+  }
+  .workshop-image {
+    height: auto;
+  }
+
+  .tutorial-box {
+    width: 100% !important;
+  }
+
+
 }

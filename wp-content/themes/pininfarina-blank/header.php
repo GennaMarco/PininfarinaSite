@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 		<!-- Generate favicon, apple touch icons and Windows Phone icon at http://realfavicongenerator.net/ -->
     <!-- Esempio: -->
@@ -26,15 +27,15 @@
 	<body <?php body_class(); ?>>
 
 	<div class="pre-header">
-		<a href="http://www.fettadipolenta.it/categoria-prodotto/laboratori/">Area prenotazioni</a>
-
-   <?php if(is_user_logged_in()) {
- 				echo "Account di ".wp_get_current_user()->user_login;
-				echo '<label class="logout"><a href="http://www.fettadipolenta.it/mio-account/customer-logout/">Logout</a> </label>';
-			} else {
-				echo '<label class="login_button"><a href="http://www.fettadipolenta.it/login/">Login</a> </label>';
-				echo '<label class="register_button"><a href="http://www.fettadipolenta.it/register">Registrati</a> </label>';
-			}
+	<!-- 		<a href="http://www.fettadipolenta.it/categoria-prodotto/laboratori/">Area prenotazioni</a>
+	 -->
+    <?php if(is_user_logged_in()) {
+			echo "Account di ".wp_get_current_user()->user_login;
+			echo '<label class="logout"><a href="'.site_url().'/logout/">Logout</a> </label>';
+		} else {
+			echo '<label class="login_button"><a href="'.site_url().'/login/">Login</a> </label>';
+			echo '<label class="register_button"><a href="'.site_url().'/register">Registrati</a> </label>';
+		}
 	 ?>
 	</div>
 
@@ -42,7 +43,9 @@
 
 		<div class="header">
 			<div class="header-title">
-				<img class="header-logo" src="<?php  echo get_field('logo', get_option( 'page_on_front' ))['url']; ?>" alt="">
+				<a href="http://www.fettadipolenta.it/" class="custom-logo-link" rel="home" itemprop="url">
+					<img class="header-logo custom-logo" src="<?php  echo get_field('logo', get_option( 'page_on_front' ))['url']; ?>" alt="">
+				</a>
 			</div>
 			<?php
 			// Utilizziamo la funzione dichiarata in inc/menu.php per posizionare qui il menu header
