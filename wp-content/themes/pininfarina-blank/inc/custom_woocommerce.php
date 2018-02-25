@@ -1,3 +1,4 @@
+
 <?php 
 	$public_authority = add_role( 
 				'public_authority', 
@@ -101,7 +102,7 @@
 					wc_get_template( 'content-product_cat.php', array(
 						'category' => $category
 					) );
-				echo "<div class=\"subcategory-link\">Al laboratorio<i class=\"glyphicon glyphicon-play\"></i></div></div>";
+				echo "<div class=\"subcategory-link\"><span>Al laboratorio</span><div class=\"triangle\"></div></div></div>";
 				
 			}
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 
 		<!-- Generate favicon, apple touch icons and Windows Phone icon at http://realfavicongenerator.net/ -->
     <!-- Esempio: -->
@@ -30,11 +30,13 @@
 	<!-- 		<a href="http://www.fettadipolenta.it/categoria-prodotto/laboratori/">Area prenotazioni</a>
 	 -->
     <?php if(is_user_logged_in()) {
-			echo "Account di ".wp_get_current_user()->user_login;
 			echo '<label class="logout"><a href="'.site_url().'/logout/">Logout</a> </label>';
+			echo '<label class="login_button">Account di '.wp_get_current_user()->user_login.'</label>';
+			echo '<label class="prenotazioni_button"><a href="'.site_url(). '/categoria-prodotto/laboratori/">Area prenotazioni</a></label>';
 		} else {
-			echo '<label class="login_button"><a href="'.site_url().'/login/">Login</a> </label>';
+			echo '<label class="prenotazioni_button"><a href="'.site_url(). '/categoria-prodotto/laboratori/">Area prenotazioni</a></label>';
 			echo '<label class="register_button"><a href="'.site_url().'/register">Registrati</a> </label>';
+			echo '<label class="login_button"><a href="'.site_url().'/login/">Login</a> </label>';
 		}
 	 ?>
 	</div>
